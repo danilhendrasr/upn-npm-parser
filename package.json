@@ -3,7 +3,7 @@
   "description": "A package to parse the student ID of UPN Jatim's students",
   "repository": {
     "type": "git",
-    "url": "git://github.com/danilhendras/upn-npm-parser.git"
+    "url": "https://github.com/danilhendras/upn-npm-parser.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
