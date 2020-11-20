@@ -1,27 +1,27 @@
 import { parseNpm } from "../index"
 
-test("Should throw an error given an npm that contained letters", () => {
+test("Should throw an error given an input that contained letter(s)", () => {
   function parse() {
     parseNpm("19a81010016")
   }
   expect(parse).toThrowError("NPM tidak valid")
 })
 
-test("Should throw an error given an incorrect-length npm", () => {
+test("Should throw an error given an input that has incorrect length", () => {
   function parse() {
     parseNpm("1908101")
   }
   expect(parse).toThrowError("NPM tidak valid")
 })
 
-test("Should throw an error given an incorrect angkatan", () => {
+test("Should throw an error given an incorrect angkatan part", () => {
   function parse() {
     parseNpm("05081010016")
   }
   expect(parse).toThrowError("Angkatan tidak valid")
 })
 
-test("Should throw an error given an incorrect kode prodi", () => {
+test("Should throw an error given an incorrect kode prodi part", () => {
   function parse() {
     parseNpm("19181010016")
   }
