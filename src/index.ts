@@ -37,7 +37,11 @@ function parseNpm(NPM: string | number): ParseResult {
   let npm = NPM
   if (typeof npm === "number") npm = String(NPM)
 
-  if (npm.length !== 11) {
+  const npmInNumber = Number(npm)
+  const npmLengthIsWrong = npm.length !== 11
+  const npmContainsLetter = isNaN(npmInNumber)
+
+  if (npmLengthIsWrong || npmContainsLetter) {
     throwError("NPM tidak valid")
   }
 
